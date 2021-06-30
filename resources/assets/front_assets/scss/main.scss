@@ -1,0 +1,2632 @@
+@import 'fonts';
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+//Variables
+$accent: #3cb878; //Groenkleur
+$gray: #9e9e9f; //Grijskleur
+$flashgreen: #00d109; //Felgroen
+$yellow: #ffd03c; //Geel
+
+//MOBILE SCSS
+body {
+    font-family: montregular, sans-serif;
+}
+
+nav {
+    //background: black;
+    background-color: black;
+
+    h2 {
+        font-family: osbold, sans-serif;
+        font-size: 2rem;
+        color: white;
+    }
+
+    span {
+        color: $accent;
+    }
+
+    .fas, .far {
+        color: white;
+    }
+
+    .nav-item {
+        .nav-link {
+            font-family: montmedium, sans-serif;
+            font-size: 1rem;
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: $accent !important;
+        }
+    }
+
+    .navbar-toggler {
+        border: 1px solid white;
+    }
+
+    .dropdown-menu {
+        background-color: black;
+
+        a {
+            font-family: montmedium, sans-serif;
+            color: white;
+        }
+
+        a:hover {
+            background-color: black;
+            color: $accent;
+
+            i {
+                color: $accent;
+            }
+        }
+    }
+
+
+    .searchbar {
+        margin-bottom: auto;
+        margin-top: auto;
+        height: 50px;
+        border: 2px solid $accent;
+        border-radius: 30px;
+        padding: 10px;
+    }
+
+    .search_input {
+        color: white;
+        border: 0;
+        outline: 0;
+        background: none;
+        width: 0;
+        caret-color: transparent;
+        line-height: 30px;
+        transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input {
+        padding: 0 20px;
+        width: 220px;
+        caret-color: white;
+        transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon {
+        background: black;
+        padding: 10px 15px;
+        color: #e74c3c;
+    }
+
+    .search_icon {
+        height: 30px;
+        width: 30px;
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: white;
+        text-decoration: none;
+    }
+
+    #badge-wish {
+        left: 38px;
+    }
+
+    /*#badge-shop {
+      top: 298px;
+      left: 93px;
+    }*/
+
+    .fa-stack[data-count]:after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        content: attr(data-count);
+        font-size: 75%;
+        //padding: .75em;
+        padding: 0.25em;
+        border-radius: 999px;
+        line-height: 1em;
+        color: white;
+        text-align: center;
+        min-width: 1.6em;
+        font-weight: bold;
+        background: $accent;
+        border: 1px solid white;
+    }
+
+    .primary-cart {
+        color: white;
+        background: black;
+    }
+
+    .cart-button {
+        background: transparent;
+        outline: none;
+        -webkit-appearance: none;
+        overflow: hidden;
+        border-style: none;
+        box-shadow: none;
+    }
+
+    .cart-button:focus {
+        box-shadow: none;
+    }
+
+    .cart-button:hover {
+        background: transparent;
+        outline: none;
+        -webkit-appearance: none;
+        overflow: hidden;
+        border-style: none;
+        box-shadow: none;
+    }
+
+    .btn-winkelwagen, .btn-checkout {
+        background: transparent;
+        border: 1px solid black;
+        border-radius: 30px;
+        color: black;
+    }
+
+    .btn-checkout:hover, .btn-winkelwagen:hover {
+        background: transparent;
+        border: 1px solid $accent;
+        border-radius: 30px;
+        color: $accent;
+    }
+
+    .modal-title {
+        font-family: osbold, sans-serif;
+        font-size: 1.2rem;
+    }
+
+    .close-icon {
+        color: black;
+    }
+
+    .spinner {
+        .knop {
+            background: transparent;
+            border-style: none;
+            box-shadow: none;
+            outline: none;
+            color: black;
+        }
+
+        .icon {
+            color: black;
+            cursor: pointer;
+        }
+
+    }
+
+    .input-group {
+        width: 60%;
+    }
+
+    .form-control {
+        box-shadow: none;
+    }
+
+    .btn-remove {
+        i {
+            color: black;
+        }
+    }
+
+}
+
+#header-content {
+    padding-bottom: 10% !important;
+
+    h1, h5 {
+        font-family: osbold, sans-serif;
+        font-size: 1rem;
+    }
+
+    #brand-name {
+        color: $accent;
+    }
+
+    .text {
+        mask-image: url("../../front_assets/images/mask.png");
+        mask-image: url("../../front_assets/images/mask.png");
+        -webkit-mask-image: url("../../front_assets/images/mask.png");
+        -webkit-mask-position: 69% -29%;
+    }
+
+    p {
+        font-family: montmedium, sans-serif;
+        font-size: 0.88rem;
+
+        span {
+            color: $accent;
+        }
+    }
+}
+
+#best-sellers, #aanbevolen {
+    p {
+        font-family: montmedium, sans-serif;
+        font-size: 0.90rem;
+    }
+
+    a {
+        color: $accent;
+        text-decoration: none;
+    }
+
+    i {
+        color: $accent;
+    }
+
+    h2 {
+        font-family: osmedium, sans-serif;
+        font-size: 1.7rem;
+    }
+
+    h5 {
+        font-family: osmedium, sans-serif;
+        font-size: 1.2rem;
+    }
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    .box {
+        position: relative;
+        width: 100%;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: .8s ease;
+    }
+
+    .btn {
+        background-color: white;
+        border: 1px solid $accent;
+        border-radius: 30px;
+        color: $accent;
+        box-shadow: none;
+    }
+
+    .box:hover .overlay {
+        top: 0;
+        height: 100%;
+        //opacity: 0.8;
+        .slide-in-bottom {
+            -webkit-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+
+        .slide-in-bottom2 {
+            -webkit-animation: slide-in-bottom 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-bottom 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+
+        .slide-in-bottom3 {
+            -webkit-animation: slide-in-bottom 1.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-bottom 1.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+    }
+
+    /* ----------------------------------------------
+   * Generated by Animista on 2020-1-24 9:39:13
+   * Licensed under FreeBSD License.
+   * See http://animista.net/license for more info.
+   * w: http://animista.net, t: @cssanimista
+   * ---------------------------------------------- */
+
+    /**
+     * ----------------------------------------
+     * animation slide-in-bottom
+     * ----------------------------------------
+     */
+    @-webkit-keyframes slide-in-bottom {
+        0% {
+            -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    @keyframes slide-in-bottom {
+        0% {
+            -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+}
+
+#service {
+    background: #f5f6f9;
+
+    h5 {
+        font-family: osbold, sans-serif;
+        font-size: 1rem;
+    }
+
+    p {
+        font-family: montmedium, sans-serif;
+        font-size: 0.90rem;
+        color: $gray;
+    }
+}
+
+#sales {
+    img {
+        position: relative;
+        width: 100%;
+    }
+
+    .card {
+        background: $yellow;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.9;
+        box-shadow: 2px 2px 2px 1px black;
+    }
+
+    .card2 {
+        background: darkgray;
+    }
+
+    .card3 {
+        background: #cd5907;
+    }
+
+    h2 {
+        font-family: osbold, sans-serif;
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-family: osmedium, sans-serif;
+        font-size: 1.1rem;
+    }
+
+}
+
+#bg-newsletter {
+    img {
+        height: 300px;
+        width: 100%;
+    }
+
+    .card {
+        opacity: 0.9;
+        width: 100%;
+    }
+
+    h3 {
+        font-family: osbold, sans-serif;
+        font-size: 1rem;
+        color: black;
+    }
+
+    p {
+        font-family: montbold, sans-serif;
+        font-size: 0.88rem;
+        color: $accent;
+    }
+
+    .btn {
+        background: $accent;
+        color: white;
+        border-radius: 30px;
+    }
+
+    input {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid black;
+        font-family: montmedium, sans-serif;
+        color: black;
+        outline: none;
+    }
+
+    ::placeholder {
+        color: black;
+    }
+
+    .carousel-caption {
+        width: 90%;
+        margin-left: -10%;
+        margin-bottom: 10%;
+    }
+
+}
+
+#bgnewsletter {
+    .card {
+        background-color: #f5f6f9;
+        opacity: 0.9;
+    }
+
+    h3 {
+        font-family: osbold, sans-serif;
+        font-size: 1.8rem;
+        color: black;
+    }
+
+    p {
+        font-family: montbold, sans-serif;
+        font-size: 1.1rem;
+        color: $accent;
+    }
+
+    .btn {
+        background: $accent;
+        color: white;
+        border: 1px solid white;
+        border-radius: 30px;
+    }
+
+    input {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid black;
+        font-family: montmedium, sans-serif;
+        color: black;
+        outline: none;
+    }
+
+    ::placeholder {
+        color: black;
+    }
+
+    .carousel-caption {
+        left: 10%;
+    }
+}
+
+#badges {
+    background: #f5f6f9;
+}
+
+#media {
+    p {
+        font-family: osmedium, sans-serif;
+        font-size: 1rem;
+    }
+
+    .btn {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: #f1f1f1;
+        margin: 5px;
+        border-radius: 30%;
+        box-shadow: 0 5px 15px -5px #00000070;
+        color: black;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .btn i {
+        line-height: 20px;
+        font-size: 15px;
+        transition: 0.2s linear;
+    }
+
+    .btn:hover i {
+        transform: scale(1.3);
+        color: #f1f1f1;
+    }
+
+    .btn::before {
+        content: "";
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        background: $accent;
+        transform: rotate(45deg);
+        left: -110%;
+        top: 90%;
+    }
+
+    .btn:hover::before {
+        animation: aaa 0.7s 1;
+        top: -10%;
+        left: -10%;
+    }
+
+    @keyframes aaa {
+        0% {
+            left: -110%;
+            top: 90%;
+        }
+        50% {
+            left: 10%;
+            top: -30%;
+        }
+        100% {
+            top: -10%;
+            left: -10%;
+        }
+    }
+}
+
+#footer {
+    background: #f5f6f9;
+
+    h3 {
+        font-family: osbold, sans-serif;
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-family: montmedium, sans-serif;
+        font-size: 0.88rem;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $accent;
+    }
+}
+
+#footer-cards {
+    background: black;
+
+    p {
+        font-family: montmedium, sans-serif;
+        font-size: 1rem;
+    }
+
+    span {
+        color: $accent;
+    }
+}
+
+#breadcrumb-nav {
+    background: white !important;
+
+    .breadcrumb {
+        background: none;
+        font-family: osmedium, sans-serif;
+        font-size: 1rem;
+    }
+
+    .breadcrumb li {
+        color: black;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $accent;
+    }
+
+    .breadcrumb-item + .breadcrumb-item::before {
+        color: black;
+        content: "| ";
+    }
+}
+
+#sidebar {
+    h2 {
+        font-family: osmedium, sans-serif;
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-family: osmedium, sans-serif;
+        font-size: 1.3rem;
+    }
+
+    .btn-link {
+        color: black;
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $accent;
+
+        .badge {
+            background: $accent;
+        }
+    }
+
+    li {
+        border: none;
+    }
+
+    .card-header {
+        background-color: transparent;
+    }
+
+    .ui-widget-content {
+        background: black;
+        color: $accent;
+    }
+
+    .ui-slider-horizontal {
+        height: .6em;
+    }
+
+    .ui-state-default {
+        background: $accent;
+        border-style: none;
+    }
+
+    .ui-widget-header {
+        background: $accent;
+    }
+
+    .ui-state-active {
+        background: $accent;
+        border-style: none;
+    }
+
+}
+
+#products-filters {
+
+    .aantal {
+        font-family: montmedium, sans-serif;
+        font-size: 0.88rem;
+    }
+
+    select {
+        border-style: none;
+        font-family: montmedium, sans-serif;
+        font-size: 0.88rem;
+        -webkit-appearance: none;
+        cursor: pointer;
+        box-shadow: none;
+        background-color: transparent;
+        text-transform: uppercase;
+        outline: none;
+    }
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    .knop {
+        background: transparent !important;
+        color: black !important;
+        border-style: none !important;
+        -webkit-appearance: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    .dropdown-item {
+        color: black;
+    }
+
+    .box {
+        position: relative;
+        width: 100%;
+    }
+
+    .image {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        transition: .8s ease;
+    }
+
+    .btn {
+        background-color: white;
+        border: 1px solid $accent;
+        border-radius: 30px;
+        color: $accent;
+        box-shadow: none;
+    }
+
+    .box:hover .overlay {
+        top: 0;
+        height: 100%;
+        //opacity: 0.8;
+        .slide-in-bottom {
+            -webkit-animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+
+        .slide-in-bottom2 {
+            -webkit-animation: slide-in-bottom 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-bottom 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+
+        .slide-in-bottom3 {
+            -webkit-animation: slide-in-bottom 1.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-bottom 1.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+    }
+
+    /* ----------------------------------------------
+   * Generated by Animista on 2020-1-24 9:39:13
+   * Licensed under FreeBSD License.
+   * See http://animista.net/license for more info.
+   * w: http://animista.net, t: @cssanimista
+   * ---------------------------------------------- */
+
+    /**
+     * ----------------------------------------
+     * animation slide-in-bottom
+     * ----------------------------------------
+     */
+    @-webkit-keyframes slide-in-bottom {
+        0% {
+            -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    @keyframes slide-in-bottom {
+        0% {
+            -webkit-transform: translateY(1000px);
+            transform: translateY(1000px);
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    a {
+        color: $accent;
+        text-decoration: none;
+    }
+
+    nav {
+        background-color: white !important;
+
+        .pagination {
+
+            .page-item.active .page-link {
+                color: $accent;
+                background-color: transparent !important;
+                border: none !important;
+            }
+
+            .page-item.disabled .page-link {
+                border-color: white;
+            }
+
+        }
+
+        .pagination > li > a {
+            color: black;
+            position: relative;
+            float: left;
+            padding: 5px;
+            margin-left: -1px;
+            line-height: 1.42857143;
+            text-decoration: none;
+            min-width: 48px;
+            height: 34px;
+            text-align: center;
+            border: none;
+        }
+
+        .pagination > li > a:hover {
+            z-index: 2;
+            color: white;
+            background-position: 0 -4px;
+            background-image: url('../../front_assets/images/paintspot.jpg');
+            background-repeat: no-repeat;
+        }
+
+        .pagination > li a {
+            text-decoration: none !important;
+        }
+    }
+
+}
+
+#detail-product {
+    h2 {
+        font-family: osbold, sans-serif;
+        font-size: 1.3rem;
+    }
+
+    .prijs {
+        font-family: osmedium, sans-serif;
+        font-size: 1.2rem;
+    }
+
+    .fas {
+        color: $accent;
+    }
+
+    span {
+        color: $accent;
+    }
+
+    p {
+        font-size: 0.90rem;
+    }
+
+    .knop {
+        background: $accent;
+        color: white;
+    }
+
+    .icon {
+        color: white;
+    }
+
+    .cart {
+        color: black;
+    }
+
+    .far {
+        color: black;
+    }
+
+    #knop-cart:hover {
+        background: $accent;
+        color: white;
+        border: 1px solid $accent;
+        transition: 0.5s ease;
+
+        .fas {
+            color: white;
+        }
+    }
+
+    #knop-wish:hover {
+        background: $accent;
+        color: white;
+        border: 1px solid $accent;
+        transition: 0.5s ease;
+
+        .far {
+            color: white;
+        }
+    }
+
+    .star {
+        color: $accent;
+        font-size: 2.0rem;
+        //padding: 0 1rem; /* space out the stars */
+    }
+
+    .star::before {
+        content: '\2606'; /* star outline */
+        cursor: pointer;
+    }
+
+    .star.rated::before {
+        /* the style for a selected star */
+        content: '\2605'; /* filled star */
+    }
+
+    .stars {
+        counter-reset: rateme 0;
+        font-size: 2.0rem;
+        font-weight: 900;
+    }
+
+    .star.rated {
+        counter-increment: rateme 1;
+    }
+
+    .stars::after {
+        color: $accent;
+        font-size: 1rem;
+        content: counter(rateme) '/5';
+    }
+
+}
+
+#product-mid {
+    .alert-dismissible .close {
+        color: black;
+        border: none;
+        background: none;
+        border-radius: 0;
+    }
+
+    a {
+        font-family: osmedium, sans-serif;
+        font-size: 1.13rem;
+        color: black;
+    }
+
+    .nav-link {
+        border: 1px solid black;
+        border-radius: 30px;
+        color: black;
+
+    }
+
+    button {
+        background: white;
+        color: black;
+        border-radius: 30px;
+        border: 1px solid black;
+    }
+
+    button:hover {
+        color: $accent;
+        border: 1px solid $accent;
+        transition: 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: $accent;
+        border: 1px solid $accent;
+        transition: 0.3s ease;
+    }
+
+    .nav-tabs {
+        border: none;
+    }
+
+    #beschrijving-tab, #myTabContent, #beoordelingen-tab, #reviews-tab {
+        background: white;
+
+        h2 {
+            font-family: osmedium, sans-serif;
+            font-size: 1.3rem;
+        }
+
+        .star {
+            color: $accent;
+            font-size: 1.5rem;
+            //padding: 0 1rem; /* space out the stars */
+        }
+
+        .star::before {
+            content: '\2606'; /* star outline */
+            cursor: pointer;
+        }
+
+        .star.rated::before {
+            /* the style for a selected star */
+            content: '\2605'; /* filled star */
+        }
+
+        .stars {
+            counter-reset: rateme 0;
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        .star.rated {
+            counter-increment: rateme 1;
+        }
+
+        .score {
+            font-family: osbold, sans-serif;
+        }
+
+        //.stars::after{
+        //  color: $accent;
+        //  font-size: 1rem;
+        //  content: counter(rateme) '/5';
+        //}
+
+        h3 {
+            font-family: osbold, sans-serif;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+#carousel-slide {
+    h2 {
+        font-family: osbold, sans-serif;
+        font-size: 1.8rem;
+        text-decoration: underline;
+    }
+
+    h5 {
+        font-family: osmedium, sans-serif;
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        color: black;
+        //opacity: 0.5;
+        width: 55px;
+        top: 30%;
+    }
+
+    a:hover {
+        opacity: 1;
+    }
+
+    .btn {
+        background: transparent;
+        border: none;
+
+        i {
+            color: black;
+        }
+
+        p {
+            color: black;
+        }
+    }
+
+    .btn:hover {
+        background: $accent;
+
+        i {
+            color: white;
+        }
+
+        p {
+            color: white;
+        }
+    }
+
+}
+
+#cart-products {
+    h2 {
+        font-family: osmedium, sans-serif;
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-family: osmedium, sans-serif;
+        font-size: 1.2rem;
+    }
+
+    a, .btn-remove {
+        color: white;
+    }
+
+    .icon-verlang, .icon-trash {
+        background: white;
+        color: black;
+        border: 1px solid black;
+    }
+
+    .icon-verlang:hover, .icon-trash:hover {
+        background: $accent;
+        color: white;
+        border: 1px solid white;
+        transition: 0.5s ease;
+    }
+
+    #btn-renew, #btn-continue {
+        background: white;
+        color: black;
+        border: 1px solid black;
+    }
+
+    #btn-renew:hover, #btn-continue:hover {
+        background: $accent;
+        color: white;
+        border: 1px solid $accent;
+        transition: 0.5s ease;
+
+        .fas {
+            color: white;
+        }
+    }
+
+    .fas {
+        color: black;
+    }
+
+    span {
+        color: $accent;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .knop {
+        background: $accent;
+        border-style: none;
+        box-shadow: none;
+        outline: none;
+        color: white;
+    }
+
+    .icon {
+        color: white;
+    }
+
+    .prijs {
+        font-family: osmedium, sans-serif;
+        font-size: 1.2rem;
+    }
+}
+
+#gifts {
+    input {
+        width: 75%;
+    }
+
+    button {
+        margin-left: -1px;
+        background: $accent;
+        color: white;
+    }
+
+    ::placeholder {
+        font-size: 0.75rem;
+    }
+
+}
+
+#totaal {
+    .fas {
+        color: $accent;
+    }
+
+    #btn-checkout {
+        background: white;
+        color: black;
+        border: 1px solid black;
+    }
+
+    #btn-checkout:hover {
+        background: $accent;
+        color: white;
+        border: 1px solid $accent;
+        transition: 0.5s ease;
+    }
+
+    .box-totaal {
+        border: 1px solid $accent;
+    }
+
+    input{
+        font-weight: 700;
+    }
+
+}
+
+#checkout-info {
+    .icon-trash {
+        background: white;
+        color: black;
+        border: 1px solid black;
+    }
+
+    .icon-trash:hover {
+        background: $accent;
+        color: white;
+        border: 1px solid white;
+        transition: 0.5s ease;
+
+        .fas {
+            color: white;
+        }
+    }
+
+    #btn-renew {
+        background: white;
+        color: black;
+        border: 1px solid black;
+    }
+
+    .btn-bestellen {
+        background: $accent;
+        color: white;
+        border: 1px solid $accent;
+    }
+
+    .btn-bestellen:hover {
+        background: white;
+        color: black;
+        border: 1px solid black;
+        transition: 0.5s ease;
+    }
+
+    #btn-renew:hover {
+        background: $accent;
+        color: white;
+        border: 1px solid $accent;
+        transition: 0.5s ease;
+    }
+
+    .checkout-header {
+        h2 {
+            font-family: osbold, sans-serif;
+            font-size: 1.5rem;
+        }
+    }
+
+    h2 {
+        font-family: osmedium, sans-serif;
+        font-size: 1.1rem;
+        color: black;
+    }
+
+    p {
+        font-family: montmedium, sans-serif;
+        font-size: 1rem;
+    }
+
+    .box {
+        border: 1px solid $accent;
+        border-radius: 5px;
+    }
+
+    span {
+        color: $accent;
+    }
+
+    .btn-order {
+        background: $accent;
+        border-radius: 30px;
+    }
+
+    .input-group {
+        width: 60%;
+    }
+
+    .form-control {
+        box-shadow: none;
+    }
+
+    label {
+        margin: 0px;
+    }
+
+    a {
+        color: $accent;
+        text-decoration: none;
+    }
+
+    .accordion {
+        .card-header {
+            background: transparent;
+            border: none;
+        }
+
+        .card {
+            border: none;
+        }
+
+        .btn-link {
+            color: $accent;
+            text-decoration: none;
+        }
+
+        .btn {
+            border-radius: 30px;
+            border: 1px solid $accent;
+            outline: none;
+        }
+
+        .btn:hover {
+            background: transparent;
+        }
+    }
+
+    .spinner {
+        .knop {
+            background: transparent;
+            border-style: none;
+            box-shadow: none;
+            outline: none;
+            color: black;
+        }
+
+        .icon {
+            color: black;
+            cursor: pointer;
+        }
+
+    }
+
+    #myTab {
+        border: none;
+
+        a {
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
+
+    .StripeElement {
+        /*box-sizing: border-box;
+        height: 40px;
+        padding: 10px 12px;*/
+        /*border: 1px solid transparent;*/
+       /* border-radius: 4px;
+        background-color: white;
+
+        box-shadow: 0 1px 3px 0 #e6ebf1;
+        -webkit-transition: box-shadow 150ms ease;
+        transition: box-shadow 150ms ease;*/
+
+        background-color: white;
+        padding: 12px 12px;
+        border: 1px solid black;
+
+    }
+
+    .StripeElement--focus {
+       /* box-shadow: 0 1px 3px 0 #cfd7df;*/
+    }
+
+    .StripeElement--invalid {
+        border-color: #fa755a;
+    }
+
+    .StripeElement--webkit-autofill {
+        background-color: #fefde5 !important;
+    }
+
+    #card-errors {
+        color: #fa755a;
+    }
+
+}
+
+#mid-content {
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    .card {
+        height: 370px;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 400px;
+        background-color: white;
+        box-shadow: 1px 1px 8px;
+    }
+
+    .card-header h3 {
+        color: $accent;
+        font-family: osbold, sans-serif;
+    }
+
+    .input-group-prepend span {
+        width: 50px;
+        background-color: $accent;
+        color: white;
+        border: 0 !important;
+    }
+
+    input:focus {
+        //outline: 0 0 0 0  !important;
+        box-shadow: 0 0 0 0 !important;
+
+    }
+
+    .remember {
+        color: $accent;
+        font-family: montmedium, sans-serif;
+    }
+
+    .remember input {
+        width: 20px;
+        height: 20px;
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+
+    .login_btn {
+        font-family: montregular, sans-serif;
+        color: white;
+        background-color: $accent;
+        width: 100px;
+        border-radius: 0px;
+    }
+
+    .login_btn:hover {
+        color: white;
+    }
+
+    .links {
+        color: $accent;
+    }
+
+    a {
+        font-family: montregular, sans-serif;
+        color: $accent;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $accent;
+    }
+
+    .links a {
+        margin-left: 4px;
+    }
+
+    #picture-right {
+        margin-left: 20%;
+    }
+}
+
+#register {
+    .card-header h3 {
+        color: $accent;
+        font-family: osbold, sans-serif;
+    }
+
+    .register_btn {
+        font-family: montregular, sans-serif;
+        color: white;
+        background-color: $accent;
+        width: 100px;
+        border-radius: 0px;
+    }
+
+    input {
+        outline: none;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+
+
+}
+
+#fqa {
+    h3 {
+        font-family: osmedium, sans-serif;
+    }
+
+    h4 {
+        font-family: osmedium, sans-serif;
+    }
+
+    .btn-link {
+        color: black;
+        font-family: osmedium, sans-serif;
+        font-size: 1.3rem;
+        text-decoration: none;
+    }
+
+    h5 {
+        font-family: osmedium, sans-serif;
+        font-size: 1rem;
+    }
+
+    span {
+        color: $accent;
+    }
+
+    a {
+        color: $accent;
+        text-decoration: none;
+    }
+
+    p {
+        font-size: 0.88rem;
+        margin-bottom: 8px;
+    }
+
+    .card {
+        border-color: $accent;
+    }
+
+    .card-header {
+        background: white;
+    }
+
+    .box {
+        font-family: osmedium, sans-serif;
+        font-size: 1.2rem;
+        border: 1px solid black;
+        border-radius: 30px;
+        color: black;
+        box-shadow: none;
+    }
+
+    .box:hover {
+        color: #3cb878;
+        border: 1px solid #3cb878;
+        transition: 0.3s ease;
+    }
+
+    #btn-verstuur {
+        background: $accent;
+        border: none;
+    }
+
+    #picture-help {
+        z-index: -5;
+        margin-left: -135px;
+        transform: skew(-10deg);
+    }
+
+    #link-up {
+        color: black;
+    }
+
+    #link-up:hover {
+        color: $accent;
+        text-decoration: none;
+    }
+
+}
+
+#wishlist-content {
+    h2 {
+        font-family: osmedium, sans-serif;
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-family: osmedium, sans-serif;
+        font-size: 1.2rem;
+    }
+
+    a, .btn-remove {
+        color: white;
+    }
+
+    .prijs {
+        font-family: osmedium, sans-serif;
+        font-size: 1.2rem;
+    }
+
+    .fas {
+        color: black;
+    }
+
+    span {
+        color: $accent;
+    }
+
+    .icon-verlang, .icon-trash {
+        background: white;
+        color: black;
+        border: 1px solid black;
+    }
+
+    .sticker {
+        color: $accent;
+    }
+
+    .icon-verlang:hover, .icon-trash:hover {
+        background: $accent;
+        color: white;
+        border: 1px solid white;
+        transition: 0.5s ease;
+
+        .fas {
+            color: white;
+        }
+    }
+
+    .knop {
+        background: $accent;
+        border-style: none;
+        box-shadow: none;
+        outline: none;
+        color: white;
+    }
+
+    .icon {
+        color: white;
+    }
+
+    #btn-continue {
+        background: white;
+        color: black;
+        border: 1px solid black;
+    }
+
+    #btn-continue:hover {
+        background: $accent;
+        color: white;
+        border: 1px solid white;
+        transition: 0.5s ease;
+    }
+
+    .card-body {
+        p {
+            font-family: lemon, sans-serif;
+            font-weight: normal;
+            font-size: 3rem;
+        }
+
+        span {
+            color: $accent;
+        }
+    }
+
+    .card-header {
+        i {
+            color: $accent;
+        }
+    }
+}
+
+#blog-content {
+    .jumbotron {
+        background-color: lightgrey;
+
+        h1 {
+            font-family: osbold, sans-serif;
+            font-size: 2rem;
+            color: black;
+        }
+
+        span {
+            color: $accent;
+        }
+
+        p {
+            color: black;
+        }
+
+        .line {
+            border: 1px solid $accent;
+        }
+
+        .btn {
+            background-color: transparent;
+            color: black;
+            border: 1px solid black;
+            border-radius: 30px;
+        }
+
+        .btn:hover {
+            color: $accent;
+            border: 1px solid $accent;
+        }
+    }
+
+    .card-body {
+        .short-lines {
+            display: -webkit-box;
+            max-width: 400px;
+            height: 109.2px;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.625;
+        }
+
+        .btn {
+            background-color: transparent;
+            color: black;
+            border: 1px solid black;
+            border-radius: 30px;
+        }
+    }
+
+    .card-title {
+        font-family: osbold, sans-serif;
+        font-size: 1.5rem;
+    }
+
+}
+
+#account {
+    h3 {
+        font-family: osmedium, sans-serif;
+        font-size: 2rem;
+    }
+
+    .btn-continue {
+        background: white;
+        color: black;
+        border: 1px solid black;
+    }
+
+    .btn-continue:hover {
+        background: $accent;
+        color: white;
+        border: 1px solid white;
+        transition: 0.5s ease;
+    }
+
+    .btn-back {
+        background: $accent;
+        color: white;
+        border: 1px solid $accent;
+    }
+
+    .btn-back:hover {
+        background: white;
+        color: black;
+        border: 1px solid black;
+        transition: 0.5s ease;
+    }
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    nav {
+        #badge-wish {
+            left: 38px;
+        }
+
+        /* #badge-shop {
+           top: 298px;
+           left: 93px;
+         }*/
+    }
+    #header-content {
+        padding-bottom: 15% !important;
+
+        h1, h5 {
+            font-family: osbold, sans-serif;
+            font-size: 1.8rem;
+        }
+
+        #brand-name {
+            color: $accent;
+        }
+
+        .text {
+            mask-image: url("../../front_assets/images/mask.png");
+            -webkit-mask-image: url("../../front_assets/images/mask.png");
+            -webkit-mask-position: 69% -29%;
+        }
+
+        p {
+            font-family: montmedium, sans-serif;
+            font-size: 1.2rem;
+
+            span {
+                color: $accent;
+            }
+        }
+    }
+    #breadcrumb-nav {
+        .breadcrumb {
+            font-size: 1.5rem;
+        }
+    }
+    #bg-newsletter {
+        img {
+            height: 300px;
+            width: 100%;
+        }
+
+        .card {
+            opacity: 0.9;
+        }
+
+        h3 {
+            font-family: osbold, sans-serif;
+            font-size: 1.8rem;
+            color: black;
+        }
+
+        p {
+            font-family: montbold, sans-serif;
+            font-size: 1.1rem;
+            color: $accent;
+        }
+
+        .btn {
+            background: $accent;
+            color: white;
+            border-radius: 30px;
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid black;
+            font-family: montmedium, sans-serif;
+            color: black;
+            outline: none;
+        }
+
+        ::placeholder {
+            color: black;
+        }
+
+        .carousel-caption {
+            width: 90%;
+            margin-left: -10%;
+            margin-bottom: 3%;
+        }
+    }
+    #detail-product {
+        h2 {
+            font-family: osbold, sans-serif;
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+    }
+    #checkout-info {
+        .input-group {
+            width: 40%;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    nav {
+        //background: black;
+
+        h2 {
+            font-family: osbold, sans-serif;
+            font-size: 2rem;
+            color: white;
+        }
+
+        span {
+            color: $accent;
+        }
+
+        .fas, .far {
+            color: white;
+        }
+
+        .nav-item {
+            .nav-link {
+                font-family: montmedium, sans-serif;
+                font-size: 1rem;
+                color: white !important;
+            }
+
+            .nav-link:hover {
+                color: $accent !important;
+            }
+        }
+
+        .searchbar {
+            margin-bottom: auto;
+            margin-top: auto;
+            height: 50px;
+            border: 2px solid $accent;
+            border-radius: 30px;
+            padding: 10px;
+        }
+
+        .search_input {
+            color: white;
+            border: 0;
+            outline: 0;
+            background: none;
+            width: 0;
+            caret-color: transparent;
+            line-height: 30px;
+            transition: width 0.4s linear;
+        }
+
+        .searchbar:hover > .search_input {
+            padding: 0 20px;
+            width: 240px;
+            caret-color: white;
+            transition: width 0.4s linear;
+        }
+
+        .searchbar:hover > .search_icon {
+            background: black;
+            padding: 10px 15px;
+            color: #e74c3c;
+        }
+
+        .search_icon {
+            height: 30px;
+            width: 30px;
+            float: right;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+        }
+
+        #badge-wish {
+            left: 38px;
+        }
+
+        /* #badge-shop {
+           top: 298px;
+           left: 93px;
+         }*/
+    }
+    #breadcrumb-nav {
+        .breadcrumb {
+            font-size: 1.5rem;
+        }
+    }
+    #header-content {
+        padding-bottom: 10% !important;
+
+        h1, h5 {
+            font-family: osbold, sans-serif;
+            font-size: 2.5rem;
+        }
+
+        #brand-name {
+            color: $accent;
+        }
+
+        .text {
+            mask-image: url("../../front_assets/images/mask.png");
+            -webkit-mask-image: url("../../front_assets/images/mask.png");
+            -webkit-mask-position: 65% -43%;
+        }
+
+        p {
+            font-family: montmedium, sans-serif;
+            font-size: 1.5rem;
+
+            span {
+                color: $accent;
+            }
+        }
+    }
+    #service {
+        background: #f5f6f9;
+
+        h5 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.88rem;
+        }
+    }
+    #footer-cards {
+        p {
+            font-size: 0.75rem;
+        }
+    }
+    #bg-newsletter {
+        img {
+            height: 300px;
+            width: 100%;
+        }
+
+        .card {
+            opacity: 0.9;
+        }
+
+        h3 {
+            font-family: osbold, sans-serif;
+            font-size: 1.8rem;
+            color: black;
+        }
+
+        p {
+            font-family: montbold, sans-serif;
+            font-size: 1.1rem;
+            color: $accent;
+        }
+
+        .btn {
+            background: $accent;
+            color: white;
+            border-radius: 30px;
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid black;
+            font-family: montmedium, sans-serif;
+            color: black;
+            outline: none;
+        }
+
+        ::placeholder {
+            color: black;
+        }
+
+    }
+    #detail-product {
+        h2 {
+            font-family: osbold, sans-serif;
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+    }
+    #carousel-slide {
+        .carousel-control-prev, .carousel-control-next {
+            color: black;
+            opacity: 0.5;
+            width: 60px;
+            top: 30%;
+        }
+    }
+    #checkout-info {
+        .input-group {
+            width: 40%;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    nav {
+        //background: black;
+
+        h2 {
+            font-family: osbold, sans-serif;
+            font-size: 2rem;
+            color: white;
+        }
+
+        span {
+            color: $accent;
+        }
+
+        .fas, .far {
+            color: white;
+        }
+
+        .nav-item {
+            .nav-link {
+                font-family: montmedium, sans-serif;
+                font-size: 1rem;
+                color: white !important;
+            }
+
+            .nav-link:hover {
+                color: $accent !important;
+            }
+        }
+
+        .searchbar {
+            margin-bottom: auto;
+            margin-top: auto;
+            height: 50px;
+            border: 2px solid $accent;
+            border-radius: 30px;
+            padding: 10px;
+        }
+
+        .search_input {
+            color: white;
+            border: 0;
+            outline: 0;
+            background: none;
+            width: 0;
+            caret-color: transparent;
+            line-height: 30px;
+            transition: width 0.4s linear;
+        }
+
+        .searchbar:hover > .search_input {
+            padding: 0 20px;
+            width: 190px;
+            caret-color: white;
+            transition: width 0.4s linear;
+        }
+
+        .searchbar:hover > .search_icon {
+            background: black;
+            padding: 10px 15px;
+            color: #e74c3c;
+        }
+
+        .search_icon {
+            height: 30px;
+            width: 30px;
+            float: right;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+        }
+
+        #badge-wish {
+            left: 912px;
+        }
+
+        /* #badge-shop {
+           top: 27px;
+           left: 964px;
+         }*/
+    }
+    #header-content {
+        padding-bottom: 14% !important;
+        width: 35%;
+
+        h1, h5 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        .btn {
+            background: $accent;
+            border: none;
+        }
+
+        .btn:hover {
+            color: whitesmoke;
+        }
+
+        .text {
+            mask-image: url("../../front_assets/images/mask.png");
+            -webkit-mask-image: url("../../front_assets/images/mask.png");
+            -webkit-mask-position: 148% -13%;
+        }
+    }
+    #breadcrumb-nav {
+        .breadcrumb {
+            font-size: 1.5rem;
+        }
+    }
+    #badges {
+        background: #5abedb;
+    }
+    #media {
+        p {
+            font-size: 1.3rem;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            background: #f1f1f1;
+            margin: 10px;
+            border-radius: 30%;
+            box-shadow: 0 5px 15px -5px #00000070;
+            color: black;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .btn i {
+            line-height: 60px;
+            font-size: 25px;
+            transition: 0.2s linear;
+        }
+
+        .btn:hover i {
+            transform: scale(1.3);
+            color: #f1f1f1;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            background: $accent;
+            transform: rotate(45deg);
+            left: -110%;
+            top: 90%;
+        }
+
+        .btn:hover::before {
+            animation: aaa 0.7s 1;
+            top: -10%;
+            left: -10%;
+        }
+
+        @keyframes aaa {
+            0% {
+                left: -110%;
+                top: 90%;
+            }
+            50% {
+                left: 10%;
+                top: -30%;
+            }
+            100% {
+                top: -10%;
+                left: -10%;
+            }
+        }
+    }
+    #totaal {
+        .card {
+            width: 75%;
+        }
+    }
+    #carousel-slide {
+        .carousel-control-prev, .carousel-control-next {
+            color: black;
+            opacity: 0.5;
+            width: 0px;
+            top: 30%;
+        }
+    }
+    #detail-product {
+        h2 {
+            font-family: osbold, sans-serif;
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+    }
+    #cart-products {
+        h2 {
+            font-family: osmedium, sans-serif;
+            font-size: 1.8rem;
+        }
+
+        p, label {
+            font-size: 1rem;
+        }
+
+        button {
+            font-size: 1rem;
+        }
+    }
+    #gifts {
+        .tbox, .btn {
+            border: none;
+            outline: none;
+        }
+
+        .tbox {
+            width: 0px;
+            transition: 0.6s;
+        }
+
+        .korting-box:hover > .tbox, .tbox:focus {
+            width: 260px;
+            padding: 0 10px;
+            border: 1px solid $accent;
+        }
+
+        .btn {
+            padding: 0 10px;
+            text-transform: uppercase;
+        }
+
+        ::placeholder {
+            font-size: 1rem;
+            padding: 0 5px;
+        }
+    }
+    #totaal {
+        p {
+            font-size: 1rem;
+        }
+    }
+    #wishlist-content {
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p, label {
+            font-size: 1rem;
+        }
+    }
+    #footer-cards {
+        p {
+            font-size: 0.88rem;
+        }
+    }
+    #bg-newsletter {
+        img {
+            height: 300px;
+            width: 100%;
+        }
+
+        .card {
+            opacity: 0.9;
+        }
+
+        h3 {
+            font-family: osbold, sans-serif;
+            font-size: 1.8rem;
+            color: black;
+        }
+
+        p {
+            font-family: montbold, sans-serif;
+            font-size: 1.1rem;
+            color: $accent;
+        }
+
+        .btn {
+            background: $accent;
+            color: white;
+            border-radius: 30px;
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid black;
+            font-family: montmedium, sans-serif;
+            color: black;
+            outline: none;
+        }
+
+        ::placeholder {
+            color: black;
+        }
+
+    }
+    #checkout-info {
+        .input-group {
+            width: 40%;
+        }
+    }
+}
+
+//END992px
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    nav {
+        //background: black;
+
+
+        h2 {
+            font-family: osbold, sans-serif;
+            font-size: 3rem;
+            color: white;
+        }
+
+        span {
+            color: $accent;
+        }
+
+        .fas, .far {
+            color: white;
+        }
+
+        .nav-item {
+            .nav-link {
+                font-family: montmedium, sans-serif;
+                font-size: 1rem;
+                color: white !important;
+            }
+
+            .nav-link:hover {
+                color: $accent !important;
+            }
+        }
+
+        .searchbar {
+            margin-bottom: auto;
+            margin-top: auto;
+            height: 50px;
+            border: 2px solid $accent;
+            border-radius: 30px;
+            padding: 10px;
+        }
+
+        .search_input {
+            color: white;
+            border: 0;
+            outline: 0;
+            background: none;
+            width: 0;
+            caret-color: transparent;
+            line-height: 30px;
+            transition: width 0.4s linear;
+        }
+
+        .searchbar:hover > .search_input {
+            padding: 0 20px;
+            width: 340px;
+            caret-color: white;
+            transition: width 0.4s linear;
+        }
+
+        .searchbar:hover > .search_icon {
+            background: black;
+            padding: 10px 15px;
+            color: #e74c3c;
+        }
+
+        .search_icon {
+            height: 30px;
+            width: 30px;
+            float: right;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+        }
+
+        #badge-wish {
+            left: 94.3%;
+        }
+
+        /* #badge-shop {
+           top: 30%;
+           left: 96.7%;
+         }*/
+
+
+    }
+    #header-content {
+        padding-bottom: 14% !important;
+        width: 29%;
+
+        h1, h5 {
+            font-size: 5rem;
+        }
+
+        p {
+            font-size: 3rem;
+        }
+
+        .btn {
+            background: $accent;
+            border: none;
+        }
+
+        .btn:hover {
+            color: whitesmoke;
+        }
+
+        .text {
+            mask-image: url("../../front_assets/images/mask.png");
+            -webkit-mask-image: url("../../front_assets/images/mask.png");
+            -webkit-mask-position: 148% -13%;
+        }
+    }
+    #sales {
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+    }
+    #service {
+        background: #f5f6f9;
+
+        h5 {
+            font-family: osbold, sans-serif;
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-family: montmedium, sans-serif;
+            font-size: 1rem;
+            color: $gray;
+        }
+    }
+    #footer-cards {
+        p {
+            font-size: 1rem;
+        }
+    }
+    .parallax {
+        background-image: url('../../front_assets/images/newsletter-background.jpg');
+        height: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #detail-product {
+        h2 {
+            font-family: osbold, sans-serif;
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .prijs {
+
+            font-size: 1.4rem;
+        }
+    }
+    #breadcrumb-nav {
+        background: white !important;
+
+        .breadcrumb {
+            background: none;
+            font-family: osmedium, sans-serif;
+            font-size: 1.5rem;
+        }
+
+    }
+    #carousel-slide {
+        h5 {
+            font-family: osmedium, sans-serif;
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            color: black;
+            opacity: 0.5;
+            width: 0px;
+            top: 30%;
+        }
+    }
+    #checkout-info {
+        .input-group {
+            width: 40%;
+        }
+    }
+}

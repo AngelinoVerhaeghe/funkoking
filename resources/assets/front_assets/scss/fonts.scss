@@ -1,0 +1,48 @@
+/**lokale fonts**/
+
+$fontface-path:'fonts';
+
+@font-face {
+  font-family: montlight;
+  src: url('#{$fontface-path}/Montserrat-Light.otf');
+}
+@font-face {
+  font-family: montregular;
+  src: url('#{$fontface-path}/Montserrat-Regular.otf');
+}
+@font-face {
+  font-family: montmedium;
+  src: url('#{$fontface-path}/Montserrat-Medium.otf');
+}
+@font-face {
+  font-family: montbold;
+  src: url('#{$fontface-path}/Montserrat-Bold.otf');
+}
+@font-face {
+  font-family: montblack;
+  src: url('#{$fontface-path}/Montserrat-Black.otf');
+}
+@font-face {
+  font-family: oslight;
+  src: url('#{$fontface-path}/Oswald-Light.ttf');
+}
+@font-face {
+  font-family: osregular;
+  src: url('#{$fontface-path}/Oswald-Regular.ttf');
+}
+@font-face {
+  font-family: osmedium;
+  src: url('#{$fontface-path}/Oswald-Medium.ttf');
+}
+@font-face {
+  font-family: osbold;
+  src: url('#{$fontface-path}/Oswald-Bold.ttf');
+}
+@font-face {
+  font-family: lemon;
+  src: url("#{$fontface-path}/Lemon-Juice.otf");
+}
+@font-face {
+  font-family: heroes;
+  src: url("#{$fontface-path}/Heroes-Legend.ttf");
+}

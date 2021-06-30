@@ -1,0 +1,17 @@
+Funko king 2
+
+Inlog gegevens
+
+email: verhaegheangelino@gmail.com
+
+pas: 12345678
+
+ook zip bestand voor Database zit erbij
+
+DB= funkoking2
+
+kredietkaart TEST:
+4242 4242 4242 4242   MM/YY  CVC
+
+Mailables ook bij registratie en contact, 
+stripe account zal dan de 29ste zijn
